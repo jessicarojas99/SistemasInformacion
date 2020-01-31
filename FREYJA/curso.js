@@ -28,13 +28,9 @@ function agregar()
 function eliminar()
 {
    
-   var nombre=document.getElementById("Name").value;
-   console.log("aqui"  + nombre);
-   var em1=new empleado("Juan","Lopez","Profesor",4445590,"juanlopez@gmail.com","Av.Vanguardia");
-     console.log("aqui"  + nombre);
-   console.log("Borrando")
-   cm.remove(em1);
-   console.log(nombre);
+//var nombre=document.getElementById("Name").value;
+   var c1=new curso("Ingles","2 horas",100);
+   cm.remove(c1);
    cm.mostrartabla("contenedor");
   
 }
@@ -135,7 +131,7 @@ class curso1
 
       if(this.lista.length===0)
       {
-         contenedor.innerHTML="<p>No exixte ningun empleado</p>";
+         contenedor.innerHTML="<p>No exixte ningun curso</p>";
       return;
       }
 

@@ -32,15 +32,14 @@ function agregar()
 function eliminar()
 {
    
-   var nombre=document.getElementById("Name").value;
+   //var nombre=document.getElementById("Name").value;
    var em1=new empleado("Juan","Lopez","Profesor",4445590,"juanlopez@gmail.com","Av.Vanguardia");
-     console.log("aqui"  + nombre);
-   console.log("Borrando")
    cm.remove(em1);
-   console.log(nombre);
    cm.mostrartabla("contenedor");
-  
+
+   
 }
+
 
 function emptyList()
 {
@@ -95,7 +94,7 @@ class empleado1
          var n=this.lista[i];
          if(n.nombre===nombre.nombre)
          {
-            this.lista.splice(i,1);
+            this.lista.pop(i);
             break;
          }
       }

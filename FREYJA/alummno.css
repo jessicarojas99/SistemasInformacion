@@ -1,0 +1,22 @@
+legend
+{
+    text-align: center;
+    font-size: 30px;
+}
+fieldset
+{
+    border-radius: 20px;
+    width: 500px;
+}
+.form label
+{
+    display: inline-flex;
+    width: 70px;
+    text-align: center;
+}
+button
+{
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+}

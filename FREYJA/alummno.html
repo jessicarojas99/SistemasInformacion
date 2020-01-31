@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="alummno.js"></script>
+    <link href="alummno.css" rel="stylesheet" type="">
+    
+    
+    <title>Formulario Alummno</title>
+</head>
+<body>
+  
+
+    <form class="form label" id="form">
+        <fieldset>
+            <legend>Informacion del Alummno</legend>
+              <label for="txtnombre">Nombre : </label>
+              <input type="text" id=txtnombre required pattern="[a-zA-Z]+" maxlength="15">
+                  <br>
+                  <br>
+              <label for="txtapellido">Apellido : </label>
+              <input type="text" id=txtapellido required pattern="[a-zA-Z]+" maxlength="15">
+                <br>
+                <br>
+              <label for="txttelefono">Telefono : </label>
+              <input type="text" id=txttelefono required pattern="[1-9]{7,8}+" maxlength="7"> 
+                <br>
+                <br>
+              <label for="txtemail">Email : </label>
+              <input type="email" id=txtemail required >
+                <br>
+                <br>
+              <label for="txtedad">Edad : </label>
+              <input type="number" id=txtedad required >
+               <br>
+               <br>
+              <label for="txtestatura">Estatura : </label>
+              <input type="text" id=txtestatura required pattern="[1-9]+">
+               <br>
+               <br>
+             <label for="txtpeso">Peso : </label>
+             <input type="number" id=txtpeso required >
+              <br>
+              <br>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary mr-2" onclick="agregarFila()">Agregar </button>
+                <button type="button" class="btn btn-danger" onclick="eliminarFila()">Eliminar </button>
+                
+              </div>
+             
+        
+    </fieldset>
+    </div>
+    </form>
+    
+    <h3>Lista De Alumnos</h3>
+     <div class="container">
+        <div class="row">
+          <table border="1" class="table" id="tablaprueba">
+            <thead class="thead-dark">
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Edad</th>
+                <th>Estatura</th>
+                <th>peso</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+      
+         
+        </div>
+      </div>
+  
+</body>
+</html>
