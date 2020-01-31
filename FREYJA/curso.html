@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="curso.css" rel="stylesheet"> 
+    <script src="curso.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="d-flex row ">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="mr-auto">
+                        <a class="navbar-brand" href="#">Freyja</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="mr-5">
+                        <a href="Empleados.html">
+                            <button class="btn btn-dark">Empleados</button>
+                        </a>
+                    </div>
+                    <div class="mr-5">
+                        <a href="alumnos.html">
+                            <button class="btn btn-dark">Alumnos</button>
+                        </a>
+                    </div>
+                    <div class="mr-5">
+                        <a href="curso.html">
+                            <button class="btn btn-dark">Curso</button>
+                        </a>
+                    </div>
+                    <div class="mr-5">
+                        <a href="login.html">
+                            <button class="btn btn-dark">Salir</button>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>Informacion Curso</h3>
+                <form  onsubmit="return agregar();">
+                    <div class="form-group">
+                        <h6 class="subtitle">Nombre</h6>
+                        <input type="text" class="form-control" placeholder="Nombre" id="Name" pattern="[a-zA-Z]{1,30}" required>
+                    </div>
+                    <div class="form-group">
+                        <h6 class="subtitle">Descripcion</h6>
+                        <input type="text" class="form-control" placeholder="Descripcion" pattern="[a-zA-Z]{1,30}" id="Descripcion" required>
+                    </div>
+                    <div class="form-group">
+                        <h6 class="subtitle">Costo</h6>
+                        <input class="form-control" id="costo" type="number" min="100" max="500" step="50" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btnSubmit">Agregar</button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col-md-6 login-form-2">
+                
+                <h3>Lista de Cursos</h3>
+                   <div id="contenedor">
+
+                   </div>
+                    <div class="form-group" >
+                        <button type="button" type="submit" class="btnSubmit" onclick="emptyList();">Empty</button>
+                        <button type="submit" class="btnSubmit" onclick="cm.save();">Guardar</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btnSubmit" onclick="loadList();">Cargar</button>
+                        <button type="submit" class="btnSubmit" onclick="eliminar();">Eliminar</button>
+                    </div>
+              
+            </div>
+        </div>
+    </div>
+</body>
+</html>
